@@ -1,21 +1,26 @@
 <?php
-// If the request is made from our space preview functionality then turn on PHP error reporting
-if (isset($_SERVER['HTTP_X_FORWARDED_URL']) && strpos($_SERVER['HTTP_X_FORWARDED_URL'], '.w3spaces-preview.com/') !== false) {
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-}
-?>
+    $name = "Ed";
 
-<html>
-<head>
-<title>PHP blank template</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<?php 
-  echo '<h1>My awesome space</h1>'; 
-?>
+    define("MESSAGE", "Hello friends!");
 
-</body>
-</html>
+    echo "<p>My name is $name</p>";
+
+    echo "<p>I'd like to say " . MESSAGE . "</p>";
+
+    $number = 45;
+
+    $calculation = $myNumber * 31 / 97 + 4;
+
+    echo "The result of the calculation is $calculation";
+
+    $myBool = true;
+
+    echo "<p>This statement is true? " . $myBool . "</p>";
+
+    echo $myBool ? "true" : "false";
+    echo "<br>";
+
+    $variableName = "name";
+
+    echo $$variableName;
+?>
